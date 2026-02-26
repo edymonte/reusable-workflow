@@ -13,4 +13,4 @@ jobs:
               run: echo "Publicação da Relase final"
     CD:
         needs: [CI]
-        uses: edymonte/reusable-workflow/cd.yml@main
+        uses: edymonte/reusable-workflow/.github/workflows/cd.yml@main
