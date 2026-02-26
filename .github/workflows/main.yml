@@ -1,6 +1,16 @@
 name: CI/CD Fake
 on: 
-    workflow_dispatch:  
+    workflow_dispatch: 
+        inputs:
+          ambiente:
+            type: choice
+            default: "desenvolvimento"
+            required: true
+            description: "Ambiene onde sera feito o deploy"
+            options:
+              - desenvolvimento
+              - homologacao
+              - producao
 jobs:
     CI:
         runs-on: ubuntu-latest
@@ -15,4 +25,4 @@ jobs:
         needs: [CI]
         uses: edymonte/reusable-workflow/.github/workflows/cd.yml@main
         with:
-          ambiente: producao
+          ambiente: ${{ inputs.ambiente }}
