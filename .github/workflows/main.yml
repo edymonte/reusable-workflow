@@ -23,6 +23,6 @@ jobs:
               run: echo "Publicação da Relase final"
     CD:
         needs: [CI]
-        uses: edymonte/reusable-workflow/.github/workflows/cd.yml@main
+        uses: edymonte/deploy-reusable/.github/workflows/deploy.yml@main
         secrets:
           ambiente: ${{ secrets.AMBIENTE_ENTREGA }}
