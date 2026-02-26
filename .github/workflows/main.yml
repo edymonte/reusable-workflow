@@ -1,16 +1,16 @@
 name: CI/CD Fake
 on: 
     workflow_dispatch: 
-        inputs:
-          ambiente:
-            type: choice
-            default: "desenvolvimento"
-            required: true
-            description: "Ambiene onde sera feito o deploy"
-            options:
-              - desenvolvimento
-              - homologacao
-              - producao
+        # inputs:
+        #   ambiente:
+        #     type: choice
+        #     default: "desenvolvimento"
+        #     required: true
+        #     description: "Ambiene onde sera feito o deploy"
+        #     options:
+        #       - desenvolvimento
+        #       - homologacao
+        #       - producao
 jobs:
     CI:
         runs-on: ubuntu-latest
