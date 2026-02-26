@@ -1,6 +1,6 @@
 name: Deploy Fake
 on:
-  wrorkflow_call:
+  workflow_call:
 jobs:
       deploy-kubernetes:
         runs-on: ubuntu-latest
